@@ -1,0 +1,65 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    background-image: url("../img/image2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top {
+    flex: 1 1 auto;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex-wrap: wrap;
+    min-height: min-content;
+    order: 0;
+    flex: 1 1 auto;
+    color: white;
+}
+
+.titleBar {
+    text-align: center;
+}
+
+.titleBar h1 {
+    font-size: 80px;
+}
+
+.titleBar p {
+    font-size: 40px;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 20px 60px;
+    text-align: center;
+    text-decoration: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.bottom {
+    bottom: 0;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+
+.bottom span {
+    color: black;
+}
