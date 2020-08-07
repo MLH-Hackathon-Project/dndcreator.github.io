@@ -10,4 +10,60 @@
 
         <title>About Us</title>
     </head>
+
+    <body>
+        <div class="top">
+            <nav class="navbar navbar-default">
+                <ul class="nav nav-pills">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="sheet.html">Character Sheet</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="middle">
+            <div class="about-us">
+                <h1 class="intro">Welcome to Dnd Character Creator</h1>
+            </div>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openInfo(event, 'DnDCharacterCreator')" id="defaultOpen">What are we?</button>
+                <button class="tablinks" onclick="openInfo(event, 'Info')">What information do we provide?</button>
+                <button class="tablinks" onclick="openInfo(event, 'Creators')">Who created this wonderful application?</button>
+            </div>
+
+            <div id="DnDCharacterCreator" class="tabcontent">
+                <h3>What are we?</h3>
+                <p>Glad you asked. This is DnD Character Creator. This web application is designed to assist
+                    beginners of dungeons and dragons in creating their character.
+                </p>
+            </div>
+
+            <div id="Info" class="tabcontent">
+                <h3>What information do we provide?</h3>
+                <p>Great question! DnD Character Creator provide the following information for each character
+                    design: Race | Racial Traits | Racial Choices | Class | Backgrounds | Skill Proficiencies | 
+                    Tool Proficiencies | Extra Languages</p>
+            </div>
+
+            <div id="Creators" class="tabcontent">
+                <h3>Who created this wonderful application?</h3>
+                <p>Another excellent question. This web application is created by Sagar Joshi and Alexandra Marlette
+                    during Major League Hacking (MLH) Roll for Hacking 2020 event.
+                </p>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <footer id="footer">
+                <p><b>Copyright &copy; DnD Character Creator 2020</b></p>
+                <span><b>Photo by <a href="https://unsplash.com/@juniorferreir_?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Júnior Ferreira</a> on 
+                    <a href="https://unsplash.com/s/photos/question?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></b></span>
+            </footer>
+        </div>
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="js/about.js" charset="utf-8"></script>
 </html>

@@ -1,0 +1,53 @@
+.table input[type=number] {
+    width: 100%;
+}
+
+html {
+    color: #222;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+  body, html {
+    height: 100%;
+}
+
+body {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    background-position: center;
+}
+
+.top {
+    flex: 1 1 auto;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.middle h1 {
+    text-align: center;
+}
+
+.top-section {
+    text-align: right;
+}
+
+.saving-throw {
+    position: absolute;
+    right: -500px;
+    top: -200px;
+    text-align: center;
+}
+
+#profBonus {
+    justify-content: right;
+}

@@ -3,20 +3,27 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="CharacterSheet/css/sheet.css">
+        <link rel="stylesheet" href="css/sheets.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet">        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <title>Character Sheet</title>
     </head>
 
     <body>
         <div class="top">
-            <h1>Character Sheet</h1>
+            <nav class="navbar navbar-default">
+                <ul class="nav nav-pills">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="sheets.html">Character Sheet</a></li>
+                </ul>
+            </nav>
         </div>
 
         <div class="middle">
+            <h1>Character Sheet</h1>
             <div class="container">
-                <form>
+                <form class="top-section">
                     <label for="fname">Character Name</label>
                     <input type="text" id="fname" name="fname">
 
@@ -29,10 +36,16 @@
                     <label for="background">Background</label>
                     <input type="text" id="background" name="background">
 
-                    <br>
+                   <hr>
 
                     <label for="race">Race</label>
                     <input type="text" id="race" name="race">
+
+                    <label for="alignment">Alignment</label>
+                    <input type="text" id="alignment" name="alignment">
+
+                    <label for="exp">Experience Points</label>
+                    <input type="text" id="exp" name="exp">
                 </form>
 
                 <div class="row">
@@ -78,7 +91,41 @@
                     </div>
                 </div>
 
+                
                 <div class="col-4">
+                    <h2>Saving Throws</h2>
+                    <table class="saving-throw">
+                        <tr>
+                            <td>Strength</td>
+                            <td><input type="number" value="10" id="strScore" onchange="updateModifiers()"></td>
+                        </tr>
+                        <tr>
+                            <td>Dexterity</td>
+                            <td><input type="number" value="10" id="dexScore" onchange="updateModifiers()"></td>
+                        </tr>
+                        <tr>
+                            <td>Constitution</td>
+                            <td><input type="number" value="10" id="conScore" onchange="updateModifiers()"></td>
+                        </tr>
+                        <tr>
+                            <td>Intelligence</td>
+                            <td><input type="number" value="10" id="intScore" onchange="updateModifiers()"></td>
+                        </tr>
+                        <tr>
+                            <td>Wisdom</td>
+                            <td><input type="number" value="10" id="wisScore" onchange="updateModifiers()"></td>
+                        </tr>
+                        <tr>
+                            <td>Charisma</td>
+                            <td><input type="number" value="10" id="chaScore" onchange="updateModifiers()"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-4">
+                    <h2>Inspiration</h2>
+                    <input type="text" id="inspiration" name="inspiration">
+
                     <h2>Proficiency Bonus</h2>
                     <input type="number" id="profBonus" value="2">
 
@@ -88,105 +135,119 @@
                     <table class="table">
                         <tr>
                             <td><input type="checkbox" id="acroProf" onchange="setSkills();"></td>
-                            <td>Acrobatics:</td>
+                            <td>Acrobatics (DEX):</td>
                             <td><input type="number" id="acroScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="animProf" onchange="setSkills();"></td>
-                            <td>Animal Handling:</td>
+                            <td>Animal Handling (WIS):</td>
                             <td><input type="number" id="animScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="arcaProf" onchange="setSkills();"></td>
-                            <td>Arcana:</td>
+                            <td>Arcana (INT):</td>
                             <td><input type="number" id="arcaScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="athlProf" onchange="setSkills();"></td>
-                            <td>Athetics:</td>
+                            <td>Athetics (STR):</td>
                             <td><input type="number" id="athlScore"></td>
                           </tr>
                         <tr>
                             <td><input type="checkbox" id="decProf" onchange="setSkills();"></td>
-                            <td>Deception:</td>
+                            <td>Deception (CHA):</td>
                             <td><input type="number" id="decScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="hisProf" onchange="setSkills();"></td>
-                            <td>History:</td>
+                            <td>History (INT):</td>
                             <td><input type="number" id="hisScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="insProf" onchange="setSkills();"></td>
-                            <td>Insight:</td>
+                            <td>Insight (WIS):</td>
                              <td><input type="number" id="insScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="intiProf" onchange="setSkills();"></td>
-                            <td>Intimidation:</td>
+                            <td>Intimidation (CHA):</td>
                             <td><input type="number" id="intiScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="invProf" onchange="setSkills();"></td>
-                            <td>Investigation:</td>
+                            <td>Investigation (INT):</td>
                             <td><input type="number" id="invScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="medProf" onchange="setSkills();"></td>
-                            <td>Medicine:</td>
+                            <td>Medicine (WIS):</td>
                             <td><input type="number" id="medScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="natProf" onchange="setSkills();"></td>
-                            <td>Nature:</td>
+                            <td>Nature (INT):</td>
                             <td><input type="number" id="natScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="percProf" onchange="setSkills();"></td>
-                            <td>Perception:</td>
+                            <td>Perception (WIS):</td>
                             <td><input type="number" id="percScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="perfProf" onchange="setSkills();"></td>
-                            <td>Performance:</td>
+                            <td>Performance (CHA):</td>
                             <td><input type="number" id="perfScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="persProf" onchange="setSkills();"></td>
-                            <td>Persuasion:</td>
+                            <td>Persuasion (CHA):</td>
                             <td><input type="number" id="persScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="relProf" onchange="setSkills();"></td>
-                            <td>Religion:</td>
+                            <td>Religion (INT):</td>
                             <td><input type="number" id="relScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="sleiProf" onchange="setSkills();"></td>
-                            <td>Sleight of Hand:</td>
+                            <td>Sleight of Hand (DEX):</td>
                             <td><input type="number" id="sleiScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="steProf" onchange="setSkills();"></td>
-                            <td>Stealth:</td>
+                            <td>Stealth (DEX):</td>
                             <td><input type="number" id="steScore"></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" id="survProf" onchange="setSkills();"></td>
-                            <td>Survival:</td>
+                            <td>Survival (WIS):</td>
                             <td><input type="number" id="survScore"></td>
                         </tr>
                     </table>
                 </div>
+
+                <div class="well">
+                    <h2>Passive Wisdom (PERCEPTION)</h2>
+                    <input type="number" class="passive" id="passive">
+                </div>
+
+                <div class="well">
+                    <h2>Other Proficiences & Languages</h2>
+                    <input type="text" class="languages" id="languages">
+                </div>
+
             </div>
         </div>
 
         <div class="bottom">
             <footer id="footer">
                 <p><b>Copyright &copy; DnD Character Creator 2020</b></p>
-                <span><b>Photo by <a href="https://unsplash.com/@joe_27?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Joel Abraham</a> on 
-                <a href="https://unsplash.com/s/photos/board-games?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></b></span>
             </footer>
         </div>
     </body>
+
+    <script src="js/sheet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </html>
