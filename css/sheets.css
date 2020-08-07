@@ -43,8 +43,8 @@ hr {
 
 .saving-throw {
     position: absolute;
-    right: -500px;
-    top: -200px;
+    /* right: -500px;
+    top: -200px; */
     text-align: center;
 }
 
