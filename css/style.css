@@ -8,7 +8,7 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
-    background-image: url("../img/image2.jpg");
+    background-image: url("../img/image4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +26,7 @@ body {
     min-height: min-content;
     order: 0;
     flex: 1 1 auto;
-    color: white;
+    color: black;
 }
 
 .titleBar {
@@ -35,14 +35,16 @@ body {
 
 .titleBar h1 {
     font-size: 80px;
+    font-family: fantasy;
 }
 
-.titleBar p {
+.titleBar h2 {
     font-size: 40px;
+    font-family: fantasy;
 }
 
 .button {
-    background-color: white;
+    background-color: transparent;
     border: none;
     color: black;
     padding: 20px 60px;
@@ -51,6 +53,13 @@ body {
     font-size: 30px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 12px;
+    font-family: fantasy;
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid white;
 }
 
 .bottom {
