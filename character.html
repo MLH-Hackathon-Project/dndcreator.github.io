@@ -102,7 +102,7 @@
 
         <div class="row">
             <div class="column">
-                <table>
+                <table class="inspiration">
                     <tr>
                         <th>Inspiration</th>
                         <th>Proficiency Bonus</th>
@@ -123,22 +123,22 @@
         
         <div class="row">
             <div class="column">
-                <table>
+                <table class="personality">
                     <tr>
                         <td>Personality Traits</td>
-                        <td><input type="text" id="personality" name="personality"></td>
+                        <td><textarea name="person" id="person" cols="50" rows="7"></textarea></td>
                     </tr>
                     <tr>
                         <td>Ideals</td>
-                        <td><input type="text" id="ideals" name="ideals"></td>
+                        <td><textarea name="ideals" id="ideals" cols="50" rows="7"></textarea></td>
                     </tr>
                     <tr>
                         <td>Bonds</td>
-                        <td><input type="text" id="bonds" name="bonds"></td>
+                        <td><textarea name="bonds" id="bonds" cols="50" rows="7"></textarea></td>
                     </tr>
                     <tr>
                         <td>Flaws</td>
-                        <td><input type="text" id="flaws" name="flaws"></td>
+                        <td><textarea name="flaws" id="flaws" cols="50" rows="7"></textarea></td>
                     </tr>
                 </table>
             </div>
@@ -146,22 +146,22 @@
 
         <div class="row">
             <div class="column">
-                <table>
+                <table class="personality">
                     <tr>
                         <td>Equipment</td>
-                        <td><input type="text" id="equipment" name="equipment"></td>
+                        <td><textarea name="equipment" id="equipment" cols="50" rows="6"></textarea></td>
                     </tr>
                     <tr>
                         <td>Features and Traits</td>
-                        <td><input type="text" id="features" name="features"></td>
+                        <td><textarea name="features" id="features" cols="50" rows="6"></textarea></td>
                     </tr>
                     <tr>
                         <td>Other Proficiences & Languages</td>
-                        <td><input type="text" id="lang" name="lang"></td>
+                        <td><textarea name="languages" id="languages" cols="50" rows="6"></textarea></td>
                     </tr>
                     <tr>
                         <td>Allies and Organizations</td>
-                        <td><input type="text"id="allies" name="allies" ></td>
+                        <td><textarea name="allies" id="allies" cols="50" rows="6"></textarea></td>
                     </tr>
                 </table>
             </div>
@@ -169,8 +169,7 @@
 
         <div class="row">
             <div class="column">
-                <caption>Skills</caption>
-                <table>
+                <table class="skills">
                     <tr>
                         <td><input type="checkbox" id="acroProf" onchange="setSkills();"></td>
                         <td>Acrobatics (DEX):</td>

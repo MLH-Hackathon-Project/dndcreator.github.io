@@ -10,7 +10,7 @@ table {
 }
 
 th, caption {
-    text-align: center;
+    text-align: left;
 }
 
 table, th, td {
@@ -30,7 +30,20 @@ form {
     flex: 1 1 auto;
 }
 
-.important-stats {
+.important-stats, .inspiration, .personality, .long {
     margin-left: 2%;
 }
 
+.long {
+    width: 25%;
+}
+
+
+textarea {
+    resize: none;
+}
+
+.skills {
+    margin-left: 37%;
+    margin-top: -88%;
+}
