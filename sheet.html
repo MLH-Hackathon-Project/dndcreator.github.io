@@ -4,54 +4,54 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/sheets.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap.min (6).css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <title>Character Sheet</title>
     </head>
 
     <body>
         <div class="top">
-            <nav class="navbar navbar-default">
-                <ul class="nav nav-pills">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="sheets.html">Character Sheet</a></li>
-                </ul>
-            </nav>
+            
+        </div>
+
+        <div class="jumbotron text-center">
+            <h1>Character Sheet</h1>
         </div>
 
         <div class="middle">
-            <h1>Character Sheet</h1>
-            <div class="container">
-                <form class="top-section">
-                    <label for="fname">Character Name</label>
-                    <input type="text" id="fname" name="fname">
+            <form class="top-section">
+                <label for="fname">Character Name</label>
+                <input type="text" id="fname" name="fname">
 
-                    <label for="class">Class</label>
-                    <input type="text" id="class" name="class">
+                <label for="class">Class</label>
+                <input type="text" id="class" name="class">
 
-                    <label for="Level">Level</label>
-                    <input type="number" id="playerLevel" min="1" max="20" value="1" onchange="playerLevelChange();">
+                <label for="Level">Level</label>
+                <input type="number" id="playerLevel" min="1" max="20" value="1" onchange="playerLevelChange();">
 
-                    <label for="background">Background</label>
-                    <input type="text" id="background" name="background">
+                <label for="background">Background</label>
+                <input type="text" id="background" name="background">
 
-                   <hr>
-
-                    <label for="race">Race</label>
-                    <input type="text" id="race" name="race">
-
-                    <label for="alignment">Alignment</label>
-                    <input type="text" id="alignment" name="alignment">
-
-                    <label for="exp">Experience Points</label>
-                    <input type="text" id="exp" name="exp">
-                </form>
                 <hr>
 
-                <div class="row">
-                    <div class="col-4">
-                        <table class="table">
+                <label for="race">Race</label>
+                <input type="text" id="race" name="race">
+
+                <label for="alignment">Alignment</label>
+                <input type="text" id="alignment" name="alignment">
+
+                <label for="exp">Experience Points</label>
+                <input type="text" id="exp" name="exp">
+            </form>
+            <hr>
+
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-sm-4" id="column">
+                        <table>
                             <tr>
                                 <th>Ability</th>
                                 <th>Score</th>
@@ -97,10 +97,12 @@
                         </table>
                     </div>
                 </div>
+            </div>
 
-                <div class="row" id="stats">
-                    <div class="col-4">
-                        <table class="table">
+            <div class="container">
+                <div class="row justify-content-start" id="stats">
+                    <div class="col-sm-4" id="column">
+                        <table>
                             <tr>
                                 <th>Inspiration</th>
                                 <th>Proficiency Bonus</th>
@@ -119,8 +121,8 @@
                     </div>
                 
 
-                <div class="col-4">
-                    <table class="table" id="text">
+                <div class="col-sm-4" id="column">
+                    <table>
                         <tr>
                             <td>Personality Traits</td>
                             <td><input type="text" id="personality" name="personality"></td>
@@ -141,7 +143,7 @@
                 </div>
 
                 <div class="col-4">
-                    <table class="table" id="input">
+                    <table>
                         <tr>
                             <td>Equipment</td>
                             <td><input type="text" id="equipment" name="equipment"></td>
@@ -163,7 +165,7 @@
 
                 <div class="col-4">
                     <h2 class="skills">Skills</h2>
-                    <table class="table" id="skills">
+                    <table>
                         <tr>
                             <td><input type="checkbox" id="acroProf" onchange="setSkills();"></td>
                             <td>Acrobatics (DEX):</td>
@@ -259,7 +261,7 @@
             </div>
 
                 <div class="col-4">
-                    <table class="table" id="more-stats">
+                    <table>
                         <tr>
                             <td>Passive Wisdom (PERCEPTION)</td>
                             <td><input type="number" class="passive" id="passive"></td>
@@ -282,7 +284,7 @@
                 <div class="row">
                     <div class="col-4">
                         <h2 class="spells">Attacks and Spellcasting</h2>
-                        <table class=table id="spells">
+                        <table>
                         <tr>
                             <th>Name</th>
                             <th>Level</th>
@@ -291,26 +293,25 @@
                         </tr>
                         <tr>
                             <td><input type="text" placeholder="spell" class="spellname" id="spellname"></td>
-                            <td><input type="number" class="level" id="level"></td>
-                            <td><input type="number" class="attack" id="attack"></td>
+                            <td><input type="number" placeholder="level" class="level" id="level"></td>
+                            <td><input type="number" placeholder="attack" class="attack" id="attack"></td>
                             <td><input type="number" placeholder="Damage" class="damage" id="damage"></td>
                         </tr>
                         <tr>
                             <td><input type="text" placeholder="spell" class="spellname" id="spellname"></td>
-                            <td><input type="number" class="level" id="level"></td>
-                            <td><input type="number" class="attack" id="attack"></td>
+                            <td><input type="number" placeholder="level" class="level" id="level"></td>
+                            <td><input type="number" placeholder="attack" class="attack" id="attack"></td>
                             <td><input type="number" placeholder="Damage" class="damage" id="damage"></td>
                         </tr>
                         <tr>
                             <td><input type="text" placeholder="spell" class="spellname" id="spellname"></td>
-                            <td><input type="number" class="level" id="level"></td>
-                            <td><input type="number" class="attack" id="attack"></td>
-                            <td><input type="number" placeholder="Damage" class="damage" id="damage"></td>
+                            <td><input type="number" placeholder="level" class="level" id="level"></td>
+                            <td><input type="number" placeholder="attack" class="attack" id="attack"></td>
+                            <td><input type="number" placeholder="Damage" class="damage" id="damage"></td><
                         </tr>
                         </table>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -322,7 +323,4 @@
     </body>
 
     <script src="js/sheet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </html>

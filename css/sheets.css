@@ -1,16 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,900');
+
 .table input[type=number] {
     width: 100%;
 }
 
-html {
+body, html {
+    height: 100%;
+}
+
+.top {
+    flex: 1 1 auto;
+}
+
+#column {
+    columns: 250px 3;
+    column-rule: 1px dotted #ccc;
+    column-gap: 3em;
+}
+table {
+    width: 49%;
+    float: left;
+}
+
+table:first-child {
+    background-color: blue;
+    color: white;
+    margin-right: 1%;
+}
+
+table:second-child {
+    background-color: black;
+    color: white;
+}
+
+/*html {
     color: #222;
     font-size: 1rem;
     line-height: 1.4;
 }
 
-  body, html {
-    height: 100%;
-}
 
 body {
     flex-direction: column;
@@ -86,7 +114,7 @@ table, td {
 
 #spells {
     margin-left: -20px;
-}
+}*/
 
 .bottom {
     bottom: 0;

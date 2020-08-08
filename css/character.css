@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+    text-align: center;
+}
+
+table {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, caption {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+form {
+    display:inline-block;
+}
+
+.top {
+    flex: 1 1 auto;
+}
+
+.important-stats {
+    margin-left: 2%;
+}
+
