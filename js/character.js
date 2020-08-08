@@ -1,3 +1,11 @@
+
+var vOneLS = JSON.parse(localStorage.getItem("vOneLocalStorage"));  
+var character = vOneLS;
+
+function fillForm(){
+  document.getElementById('person').innerHTML += character.personality;
+}
+
 function updateModifiers() {
     
     var strScore = document.getElementById("strScore").value;

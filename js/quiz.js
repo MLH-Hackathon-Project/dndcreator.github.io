@@ -70,6 +70,7 @@ var character = {
 
 }
 
+
 var backgrounds = [{
     //Acolyte
     backgroundName: "Acolyte",
@@ -458,7 +459,7 @@ var questions = [{
 var currentQuestion = 0,
     quizComplete = false;
 
-$(document).ready(function () {
+    $(document).ready(function () {
 
 	updateQuestion();
 
@@ -494,7 +495,8 @@ if (!quizComplete) {
                 character.flaws = backgrounds[0].flaws[Math.random() + (slot-1)];
                 console.log(character.flaws);
                 quizComplete = true;
-                location.href = '/http://your.url.here'
+                localStorage.setItem("vOneLocalStorage", JSON.stringify(character));  
+                window.location.href = "./character.html";
             }
           
 			currentQuestion = value;
