@@ -39,15 +39,60 @@ hr {
 
 .top-section {
     text-align: right;
+    justify-content: center;
 }
 
-.saving-throw {
-    position: absolute;
-    right: -500px;
-    top: -200px;
+table {
+    width: 100%;
+}
+
+table, td {
+    border: solid black 1px;
+}
+
+#skills {
+    margin-top: 0px;
+    margin-left: 800px;
+}
+
+.skills {
+    margin-left: 920px;
+    margin-top: -570px;
+}
+
+.stats {
+    margin: auto;
+}
+
+#text {
+    margin-left: 450px;
+    margin-top: -570px;
+}
+
+#input {
+    margin-top: -15.5px;
+    margin-left: 450px
+}
+
+#more-stats {
+    margin-left: 450px;
+    margin-top: -661px;
+}
+
+.spells {
+    margin-top: -230px;
+    margin-left: 100px;
+}
+
+#spells {
+    margin-left: -20px;
+}
+
+.bottom {
+    bottom: 0;
+    left: 0;
     text-align: center;
-}
-
-#profBonus {
-    justify-content: right;
+    color: black;
+    width: 100%;
+    margin-top: 400px;
 }

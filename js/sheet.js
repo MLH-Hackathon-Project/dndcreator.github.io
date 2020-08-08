@@ -137,7 +137,6 @@ function setSkills(){
     } else {
       document.getElementById("survScore").value = wisMod;
     }
-    
 }
   
 function playerLevelChange() {
