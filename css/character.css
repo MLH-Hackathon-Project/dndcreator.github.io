@@ -35,20 +35,19 @@ form {
     flex: 1 1 auto;
 }
 
-.important-stats, .inspiration, .personality {
+.important-stats, .inspiration, .personality, .spell {
     margin-left: 2%;
 }
 
 .inspiration {
-    width: 907px;
+    width: 912px;
 }
 
 .long {
-    margin-right: 27.5%;
-    margin-top: -47.5%;
+    margin-right: 27.7%;
+    margin-top: -47.1%;
     height: 611px;
 }
-
 
 textarea {
     resize: none;
@@ -57,17 +56,16 @@ textarea {
 .skills {
     margin-left: 72.5%;
     margin-top: -66%;
-    height: 813px;
+    height: 820px;
 }
 
 .hits {
     margin-left: 49.5%;
-    margin-top: -65.5%;
+    margin-top: -65.1%;
     width: 296px;
 }
 
 .spell {
-    margin-left: 2%;
     margin-top: 0%;
     width: 905px;
 }
