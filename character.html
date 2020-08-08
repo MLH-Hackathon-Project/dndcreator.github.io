@@ -111,7 +111,7 @@
                         <th>Speed</th>
                     </tr>
                     <tr>
-                        <td><input type="number" value="0" id="inspiration" onchange="updateModifiers()"></td>
+                        <td style="width:50px"><input type="number" value="0" id="inspiration" onchange="updateModifiers()"></td>
                         <td><input type="number" id="profBonus" value="2"></td>
                         <td><input type="number" min="1" id="armour" value="1"></td>
                         <td><input type="number" value="0" id="initiative"></td> <!-- same as Dex Mod-->
@@ -146,22 +146,22 @@
 
         <div class="row">
             <div class="column">
-                <table class="personality">
+                <table class="long">
                     <tr>
                         <td>Equipment</td>
-                        <td><textarea name="equipment" id="equipment" cols="50" rows="6"></textarea></td>
+                        <td><textarea name="equipment" id="equipment" cols="50" rows="7"></textarea></td>
                     </tr>
                     <tr>
                         <td>Features and Traits</td>
-                        <td><textarea name="features" id="features" cols="50" rows="6"></textarea></td>
+                        <td><textarea name="features" id="features" cols="50" rows="7"></textarea></td>
                     </tr>
                     <tr>
                         <td>Other Proficiences & Languages</td>
-                        <td><textarea name="languages" id="languages" cols="50" rows="6"></textarea></td>
+                        <td><textarea name="languages" id="languages" cols="50" rows="7"></textarea></td>
                     </tr>
                     <tr>
                         <td>Allies and Organizations</td>
-                        <td><textarea name="allies" id="allies" cols="50" rows="6"></textarea></td>
+                        <td><textarea name="allies" id="allies" cols="50" rows="7"></textarea></td>
                     </tr>
                 </table>
             </div>
@@ -170,6 +170,7 @@
         <div class="row">
             <div class="column">
                 <table class="skills">
+                    <caption>Skills</caption>
                     <tr>
                         <td><input type="checkbox" id="acroProf" onchange="setSkills();"></td>
                         <td>Acrobatics (DEX):</td>
@@ -266,22 +267,22 @@
 
         <div class="row">
             <div class="column">
-                <table>
+                <table class="hits">
                     <tr>
                         <td>Passive Wisdom (PERCEPTION)</td>
-                        <td><input type="number" class="passive" id="passive"></td>
+                        <td style="height:46px"><input type="number" class="passive" id="passive"></td>
                     </tr>
                     <tr>
                         <td>Current Hit Points</td>
-                        <td><input type="number" class="current" id="current"></td>
+                        <td style="height:46px"><input type="number" class="current" id="current"></td>
                     </tr>
                     <tr>
                         <td>Maximum Hit Points</td>
-                        <td><input type="number" class="max" id="max"></td>
+                        <td style="height:46px"><input type="number" class="max" id="max"></td>
                     </tr>
                     <tr>
                         <td>Temporary Hit Points</td>
-                        <td><input type="number" class="temp" id="temp"></td>
+                        <td style="height:46px"><input type="number" class="temp" id="temp"></td>
                     </tr>
                 </table>
             </div>
@@ -289,8 +290,8 @@
 
         <div class="row">
             <div class="columm">
-                <caption>Attacks and Spellcasting</caption>
-                <table>
+                <table class="spell">
+                    <caption>Attacks and Spellcasting</caption>
                     <tr>
                         <th>Name</th>
                         <th>Level</th>

@@ -30,12 +30,16 @@ form {
     flex: 1 1 auto;
 }
 
-.important-stats, .inspiration, .personality, .long {
+.important-stats, .inspiration, .personality {
     margin-left: 2%;
 }
 
 .long {
     width: 25%;
+    top: 900px;
+    margin-right: 27.5%;
+    margin-top: -47.5%;
+    height: 50px;
 }
 
 
@@ -44,6 +48,16 @@ textarea {
 }
 
 .skills {
-    margin-left: 37%;
-    margin-top: -88%;
+    margin-left: 72.5%;
+    margin-top: -48%;
+}
+
+.hits {
+    margin-left: 49.5%;
+    margin-top: -65.5%;
+}
+
+.spell {
+    margin-left: 2%;
+    margin-top: 0%
 }
