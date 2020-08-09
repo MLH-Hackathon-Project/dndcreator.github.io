@@ -14,8 +14,7 @@ function updateModifiers() {
     document.getElementById("chaMod").value = Math.floor((chaScore - 10)/2);
     
     setSkills();
-    savingThrows();
-  }
+}
   
 function updateProfBonus() {    
     var playerLevel = parseInt(document.getElementById("playerLevel").value);
@@ -31,11 +30,6 @@ function updateProfBonus() {
     } else {
       document.getElementById("profBonus").value = 2;
     }
-    
-}
-
-function savingThrows() {
-
 }
   
 function setSkills(){
@@ -143,5 +137,4 @@ function playerLevelChange() {
     updateProfBonus();
     updateModifiers();
     setSkills();
-    savingThrows();
 }
