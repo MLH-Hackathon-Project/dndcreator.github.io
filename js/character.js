@@ -1,3 +1,21 @@
+
+var vOneLS = JSON.parse(localStorage.getItem("vOneLocalStorage"));  
+var character = vOneLS;
+
+function fillForm(){
+  document.getElementById('class').value = character.class;
+  document.getElementById('background').value = character.background;
+  document.getElementById('person').innerHTML += character.personality;
+  document.getElementById('ideals').innerHTML += character.ideals;
+  document.getElementById('bonds').innerHTML += character.bonds;
+  document.getElementById('flaws').innerHTML += character.flaws;
+  document.getElementById('equipment').innerHTML += character.equipment + character.tools;
+  document.getElementById("insProf").checked = true;
+  document.getElementById("relProf").checked = true;
+  document.getElementById("steProf").checked = true;
+  document.getElementById("athlProf").checked = true;
+}
+
 function updateModifiers() {
     
     var strScore = document.getElementById("strScore").value;

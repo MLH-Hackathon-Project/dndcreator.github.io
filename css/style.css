@@ -8,10 +8,10 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
-    background-image: url("../img/image4.jpg");
-    background-position: center;
+    background-image: url("../img/dndbackground.jpg");
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .top {
@@ -67,4 +67,20 @@ body {
     justify-content: center;
     text-align: center;
     color: black;
+}
+
+.nav {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 22px;
+}
+
+.container {
+    background-color: #83c5be;
+    border-radius: 6px;
+    width: 75%;
+    margin: 200px;
+    padding-top: 5px;
+    box-shadow: 10px 10px 5px #006d77;
+    position: relative;
+    
 }
