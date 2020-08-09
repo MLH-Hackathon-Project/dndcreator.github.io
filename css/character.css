@@ -3,6 +3,10 @@
     zoom: 1.0 ;
 }
 
+body {
+    height: 100%;
+}
+
 body, h1 {
     text-align: center;
 }
@@ -31,7 +35,6 @@ body, h1 {
     float: left;
     width: 50%;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
 }
   
 .rows:after {
@@ -39,25 +42,6 @@ body, h1 {
     display: table;
     clear: both;
 }
-
-/*table {
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-th, caption {
-    text-align: left;
-}
-
-table, th, td {
-    border: 1px solid #ccc;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 10px;
-}*/
 
 .top {
     flex: 1 1 auto;
@@ -71,4 +55,10 @@ th, td {
 .spell caption {
     text-align: center;
     color: black;;
+}
+
+.form-group {
+    margin: 0 auto;
+    float: left;
+    display: inline-block;
 }
