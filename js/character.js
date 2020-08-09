@@ -3,7 +3,8 @@ var vOneLS = JSON.parse(localStorage.getItem("vOneLocalStorage"));
 var character = vOneLS;
 
 function fillForm(){
-  document.getElementById('fname').value = character.class;
+  document.getElementById('class').value = character.class;
+  document.getElementById('background').value = character.background;
   document.getElementById('person').innerHTML += character.personality;
   document.getElementById('ideals').innerHTML += character.ideals;
   document.getElementById('bonds').innerHTML += character.bonds;
