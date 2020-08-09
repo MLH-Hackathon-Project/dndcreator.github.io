@@ -68,3 +68,8 @@ body {
     text-align: center;
     color: black;
 }
+
+.nav {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 22px;
+}

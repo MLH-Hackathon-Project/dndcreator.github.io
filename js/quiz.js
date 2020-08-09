@@ -451,6 +451,25 @@ var questions = [{
             "slot": 3
         },
 	]
+},  {
+	//Gods Flaws
+	"choices": [
+		{
+			"label": "Trust",
+            "path": 15,
+            "slot": 1
+		},
+		{
+			"label": "Judge",
+            "path": 15,
+            "slot": 2
+        },
+        {
+			"label": "Fixate",
+            "path": 15,
+            "slot": 3
+        },
+	]
 },
 
 
@@ -481,22 +500,34 @@ if (!quizComplete) {
                 character.insProf = backgrounds[0].insPrf;
                 character.relProf = backgrounds[0].relPrf;
                 character.equipment = backgrounds[0].equipment;
-                character.relProf = backgrounds[0].langcount;   
+                character.relProf = backgrounds[0].langcount; 
             } else if(value == 11){
                 character.personality = backgrounds[0].traits[slot-1];
-                console.log(character.personality);
+                console.log(character.personality);  
             } else if(value == 12){
+                character.personality = backgrounds[0].traits[slot-1];
+                console.log(character.personality);
+                
+            } else if(value == 13){
                 character.ideals = backgrounds[0].ideals[slot-1];
                 console.log(character.ideals);
-            } else if(value == 13){
-                character.bonds = backgrounds[0].bonds[Math.random() + (slot-1)];
-                console.log(character.bonds);
+                // character.bonds = backgrounds[0].bonds[Math.random() + (slot-1)];
+                // console.log(character.bonds);
             } else if(value == 14){
-                character.flaws = backgrounds[0].flaws[Math.random() + (slot-1)];
+                var num = getRandomInt(2);
+                character.bonds = backgrounds[0].bonds[(num + (slot-1))];
+                console.log(character.bonds);
+            }else if(value == 15){
+                var num = getRandomInt(2);
+                character.flaws = backgrounds[0].flaws[num + (slot-1)];
+                character.class = "Monk";
+                character.equipment +="(a) a shortsword or (b) any simple weapon; (a) a dungeoneer's pack or (b) an explorer's pack; 10 darts"
+
+                character.tools += " any one type of artisan's tools or any one musical instrument of your choice"
                 console.log(character.flaws);
                 quizComplete = true;
                 localStorage.setItem("vOneLocalStorage", JSON.stringify(character));  
-                window.location.href = "./character.html";
+                window.location.href = "./class.html";
             }
           
 			currentQuestion = value;
@@ -536,3 +567,7 @@ function updateQuestion() {
   //It needs to be called every update
   nextQuestion();
 }
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
