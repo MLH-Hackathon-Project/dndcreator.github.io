@@ -1,4 +1,3 @@
-
 var vOneLS = JSON.parse(localStorage.getItem("vOneLocalStorage"));  
 var character = vOneLS;
 
